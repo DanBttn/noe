@@ -22,9 +22,9 @@ const Hero = ({ onOpenCard }: { onOpenCard: (card: CardId) => void }) => {
       <div data-hero-content className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
         <div data-hero-logo>
           <img
-            src="/ok top.png"
+            src="/logo-vert.png"
             alt={t.hero.logoAlt}
-            className="h-40 sm:h-52 lg:h-60 w-auto"
+            className="h-40 sm:h-52 lg:h-60 w-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]"
           />
         </div>
 
