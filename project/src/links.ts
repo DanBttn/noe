@@ -5,11 +5,6 @@ const OPENTABLE_LOCALES: Record<Lang, string> = { fr: 'fr-FR', en: 'en-GB' };
 export const openTableUrl = (lang: Lang) =>
   `https://www.opentable.fr/booking/restref/availability?lang=${OPENTABLE_LOCALES[lang]}&restRef=485235&otSource=Restaurant%20website`;
 
-// Module de réservation OpenTable intégré au site : format « tall » (avec calendrier),
-// couleur 6 (bouton bordeaux). Les couleurs proposées par OpenTable vont de 1 à 7 (4 = vert foncé).
-export const openTableWidgetUrl = (lang: Lang) =>
-  `https://www.opentable.fr/widget/reservation/loader?rid=485235&type=standard&theme=tall&color=6&dark=false&iframe=true&domain=fr&lang=${OPENTABLE_LOCALES[lang]}&newtab=false&ot_source=Restaurant%20website`;
-
 const MAPS_ADDRESS = encodeURIComponent('Noé, 34 rue Legendre, 75017 Paris');
 
 // URL d'intégration directe : l'ancienne forme (maps?output=embed) passe par une redirection

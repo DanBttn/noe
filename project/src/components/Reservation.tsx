@@ -1,6 +1,5 @@
 import { Clock, Mail, Phone, Users } from 'lucide-react';
 import SectionHeading from './SectionHeading';
-import OpenTableWidget from './OpenTableWidget';
 import { openTableUrl } from '../links';
 import { EMAIL, PHONE } from '../data/info';
 import { useLanguage } from '../i18n/context';
@@ -47,21 +46,14 @@ const Reservation = () => {
             <h3 className="mt-3 font-serif text-xl sm:text-3xl whitespace-nowrap">{r.cardTitle}</h3>
             <p className="mt-4 font-light">{r.cardText}</p>
 
-            <div className="mt-8">
-              <OpenTableWidget lang={lang} title={r.openTable} />
-            </div>
-
-            {/* Lien de secours si le module ne se charge pas (bloqueur de publicité, réseau…) */}
-            <p className="mt-4 text-center text-sm">
-              <a
-                href={openTableUrl(lang)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline underline-offset-4 opacity-80 hover:opacity-100 transition-opacity duration-300"
-              >
-                {r.openTable}
-              </a>
-            </p>
+            <a
+              href={openTableUrl(lang)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 flex w-full items-center justify-center py-4 px-6 rounded-full bg-[#7B2D26] text-white text-base tracking-wide shadow-lg shadow-black/20 hover:bg-[#6B2520] transition-colors duration-300"
+            >
+              {r.openTable}
+            </a>
 
             <div className="mt-8 flex items-center gap-4 text-xs uppercase tracking-[0.25em]">
               <span className="h-px flex-1"></span>
