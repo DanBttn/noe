@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import LanguageSwitch from './LanguageSwitch';
+import InstagramIcon from './InstagramIcon';
 import { openTableUrl } from '../links';
+import { INSTAGRAM_URL } from '../data/info';
 import { scrollToSection } from '../motion';
 import { useLanguage } from '../i18n/context';
 
@@ -67,6 +69,15 @@ const Header = () => {
           </nav>
 
           <div className="flex items-center gap-3 sm:gap-4">
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram @noeparis17"
+              className="p-1 opacity-90 hover:opacity-100 transition-opacity duration-300"
+            >
+              <InstagramIcon className="w-5 h-5" />
+            </a>
             <LanguageSwitch />
             <a
               href={openTableUrl(lang)}

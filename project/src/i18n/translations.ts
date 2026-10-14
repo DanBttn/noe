@@ -83,6 +83,9 @@ const fr = {
     eyebrow: 'Galerie',
     title: "L'univers de Noé",
     intro: "Découvrez l'univers de Noé à travers nos créations culinaires et notre atmosphère chaleureuse.",
+    previous: 'Photos précédentes',
+    next: 'Photos suivantes',
+    hint: 'Faites glisser pour voir toutes les photos',
     alts: [
       'La salle du restaurant Noé vue depuis la rue',
       'Assiette de saison aux fleurs comestibles',
@@ -244,6 +247,9 @@ const en: Dictionary = {
     eyebrow: 'Gallery',
     title: 'The world of Noé',
     intro: 'Discover the world of Noé through our dishes and our warm atmosphere.',
+    previous: 'Previous photos',
+    next: 'Next photos',
+    hint: 'Swipe to see all the photos',
     alts: [
       'The dining room at Noé seen from the street',
       'Seasonal dish with edible flowers',
