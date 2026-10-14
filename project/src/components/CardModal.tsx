@@ -1,9 +1,10 @@
 import { useCallback, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { X } from 'lucide-react';
+import { FileText, X } from 'lucide-react';
 import type { Card } from '../data/cards';
 import { setScrollLocked } from '../motion';
+import { useLanguage } from '../i18n/context';
 
 interface CardModalProps {
   card: Card;
@@ -11,6 +12,7 @@ interface CardModalProps {
 }
 
 const CardModal = ({ card, onClose }: CardModalProps) => {
+  const { t } = useLanguage();
   const container = useRef<HTMLDivElement>(null);
   const closeButton = useRef<HTMLButtonElement>(null);
   const closing = useRef(false);
@@ -84,12 +86,23 @@ const CardModal = ({ card, onClose }: CardModalProps) => {
             <p className="mt-1 text-sm sm:text-base italic text-[#7B2D26]" style={{ fontFamily: 'Playfair Display, serif' }}>
               {card.subtitle}
             </p>
+            {card.link && (
+              <a
+                href={card.link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center gap-2 rounded-full bg-[#7B2D26] px-5 py-2.5 text-base sm:text-lg text-white hover:bg-[#6B2520] transition-colors duration-300"
+              >
+                <FileText className="w-5 h-5 shrink-0" />
+                {card.link.label}
+              </a>
+            )}
           </div>
           <button
             ref={closeButton}
             type="button"
             onClick={close}
-            aria-label="Fermer"
+            aria-label={t.common.close}
             className="shrink-0 p-2 -mr-2 rounded-full hover:bg-[#4B4C3A]/10 transition-colors duration-300"
           >
             <X className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -139,16 +152,6 @@ const CardModal = ({ card, onClose }: CardModalProps) => {
                 {note}
               </p>
             ))}
-            {card.link && (
-              <a
-                href={card.link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block pt-3 text-xs sm:text-sm text-[#7B2D26] underline underline-offset-4 hover:opacity-70 transition-opacity duration-300"
-              >
-                {card.link.label}
-              </a>
-            )}
           </div>
         </div>
       </div>

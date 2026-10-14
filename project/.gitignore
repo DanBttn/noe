@@ -24,3 +24,6 @@ dist-ssr
 
 .vercel
 .env*
+
+# Fichiers temporaires de Vite
+*.timestamp-*.mjs

@@ -65,6 +65,7 @@ export const useSmoothScroll = () => {
  *   data-anim="image"      image dévoilée par un masque, avec parallaxe interne
  *   data-anim-group        enfants révélés en cascade ("clip" = dévoilés par un masque)
  *   data-parallax="40"     décalage vertical (px) lié au défilement
+ *   data-hscroll           rangée épinglée qui défile horizontalement (data-hscroll-track, data-hscroll-progress)
  */
 export const useSiteAnimations = (scope: RefObject<HTMLElement | null>) => {
   useGSAP(
@@ -213,6 +214,31 @@ export const useSiteAnimations = (scope: RefObject<HTMLElement | null>) => {
               scrollTrigger: { trigger: track.parentElement, start: 'top bottom', end: 'bottom top', scrub: 0.6 },
             }
           );
+        });
+
+        // Galerie : la rangée de photos est épinglée et glisse vers la gauche pendant le scroll.
+        all('[data-hscroll]').forEach((wrapper) => {
+          const track = wrapper.querySelector<HTMLElement>('[data-hscroll-track]');
+          const progress = wrapper.querySelector<HTMLElement>('[data-hscroll-progress]');
+          if (!track) return;
+          const distance = () => Math.max(0, track.scrollWidth - wrapper.clientWidth);
+
+          gsap.set(wrapper, { overflow: 'hidden' });
+          gsap.to(track, {
+            x: () => -distance(),
+            ease: 'none',
+            scrollTrigger: {
+              trigger: wrapper,
+              start: 'center center',
+              // Défilement un peu plus court que la largeur de la rangée, pour que la galerie ne paraisse pas interminable.
+              end: () => `+=${distance() * 0.75}`,
+              pin: true,
+              scrub: 1,
+              anticipatePin: 1,
+              invalidateOnRefresh: true,
+              onUpdate: (self) => progress && gsap.set(progress, { scaleX: self.progress }),
+            },
+          });
         });
       });
 

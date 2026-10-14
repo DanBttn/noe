@@ -11,8 +11,10 @@ import Footer from './components/Footer';
 import CardModal from './components/CardModal';
 import { CARDS, type CardId } from './data/cards';
 import { useSiteAnimations, useSmoothScroll } from './motion';
+import { useLanguage } from './i18n/context';
 
 function App() {
+  const { lang } = useLanguage();
   const root = useRef<HTMLDivElement>(null);
   useSmoothScroll();
   useSiteAnimations(root);
@@ -36,7 +38,7 @@ function App() {
       <Reservation />
       <Contact />
       <Footer />
-      {openCard && <CardModal key={openCard} card={CARDS[openCard]} onClose={closeCard} />}
+      {openCard && <CardModal key={openCard} card={CARDS[lang][openCard]} onClose={closeCard} />}
     </div>
   );
 }
