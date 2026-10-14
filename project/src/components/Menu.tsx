@@ -5,7 +5,7 @@ import { useLanguage } from '../i18n/context';
 
 const TEASER_IMAGES: Record<CardId, string> = {
   menu: '/images/galerie/noe-08.jpg',
-  wine: '/images/galerie/noe-03.jpg',
+  wine: '/images/galerie/noe-14.jpg',
 };
 
 const TEASER_ORDER: CardId[] = ['menu', 'wine'];

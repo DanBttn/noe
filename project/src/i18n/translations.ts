@@ -68,7 +68,7 @@ const fr = {
         text: 'Une cuisine française de saison, gourmande et généreuse.',
       },
       wine: {
-        alt: 'Champagne Egly-Ouriet et verres à vin',
+        alt: 'Champagne Krug Rosé présenté par le sommelier',
         eyebrow: 'Bulles · Blancs · Rouges · Rosé · Doux',
         title: 'La Carte des vins',
         text: 'Notre sélection au verre, choisie par notre sommelier.',
@@ -229,7 +229,7 @@ const en: Dictionary = {
         text: 'Seasonal French cooking, indulgent and generous.',
       },
       wine: {
-        alt: 'Egly-Ouriet Champagne and wine glasses',
+        alt: 'Krug Rosé Champagne presented by the sommelier',
         eyebrow: 'Sparkling · Whites · Reds · Rosé · Sweet',
         title: 'The Wine List',
         text: 'Our wines by the glass, chosen by our sommelier.',
