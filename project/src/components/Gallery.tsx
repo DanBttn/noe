@@ -12,7 +12,7 @@ const IMAGES = [
 
 const Gallery = () => {
   return (
-    <section id="galerie" className="py-24 sm:py-28 lg:py-36 bg-olive">
+    <section id="galerie" className="py-24 sm:py-28 lg:py-36">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           index="03"
@@ -35,7 +35,7 @@ const Gallery = () => {
                   loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-moss-dark/20 group-hover:bg-transparent transition-colors duration-500"></div>
+                <div className="absolute inset-0 group-hover:bg-transparent transition-colors duration-500"></div>
               </div>
             </div>
           ))}

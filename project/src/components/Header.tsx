@@ -34,8 +34,8 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-colors duration-500 ${
-        solid ? 'bg-cream/95 backdrop-blur-md shadow-[0_1px_0_rgba(75,76,58,0.12)]' : 'bg-transparent'
-      }`}
+ solid ? 'backdrop-blur-md shadow-[0_1px_0_rgba(75,76,58,0.12)]' : 'bg-transparent'
+ }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
@@ -54,9 +54,7 @@ const Header = () => {
                 key={item.id}
                 type="button"
                 onClick={() => goToSection(item.id)}
-                className={`relative text-sm tracking-wide transition-colors duration-300 after:absolute after:left-0 after:-bottom-1 after:h-px after:w-full after:bg-wine after:origin-left after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 ${
-                  solid ? 'text-moss hover:text-wine' : 'text-cream/90 hover:text-cream'
-                }`}
+                className="relative text-sm tracking-wide transition-colors duration-300 after:absolute after:left-0 after:-bottom-1 after:h-px after:w-full after:origin-left after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100"
               >
                 {item.label}
               </button>
@@ -68,13 +66,13 @@ const Header = () => {
               href={OPENTABLE_RESERVATION_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center bg-sage text-cream px-5 lg:px-6 py-2.5 rounded-full text-sm tracking-wide hover:bg-sage-dark transition-colors duration-300"
+              className="hidden sm:inline-flex items-center px-5 lg:px-6 py-2.5 rounded-full text-sm tracking-wide transition-colors duration-300"
             >
               Réserver
             </a>
             <button
               type="button"
-              className={`lg:hidden p-2 -mr-2 transition-colors duration-300 ${solid ? 'text-moss' : 'text-cream'}`}
+              className="lg:hidden p-2 -mr-2 transition-colors duration-300"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label={isMobileMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
               aria-expanded={isMobileMenuOpen}
@@ -86,14 +84,14 @@ const Header = () => {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="lg:hidden border-t border-moss/10 bg-cream">
+        <div className="lg:hidden border-t">
           <nav className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col">
             {NAV_ITEMS.map((item) => (
               <button
                 key={item.id}
                 type="button"
                 onClick={() => goToSection(item.id)}
-                className="py-3 text-left font-serif text-2xl text-moss hover:text-wine transition-colors duration-300"
+                className="py-3 text-left font-serif text-2xl transition-colors duration-300"
               >
                 {item.label}
               </button>
@@ -102,7 +100,7 @@ const Header = () => {
               href={OPENTABLE_RESERVATION_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 mb-2 inline-flex justify-center bg-sage text-cream px-6 py-3 rounded-full tracking-wide hover:bg-sage-dark transition-colors duration-300"
+              className="mt-4 mb-2 inline-flex justify-center px-6 py-3 rounded-full tracking-wide transition-colors duration-300"
             >
               Réserver une table
             </a>

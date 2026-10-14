@@ -25,14 +25,13 @@ const WINE_STYLES = ['Vins naturels', 'Biodynamiques', 'Conventionnels'];
 
 const Menu = ({ onOpenCard }: { onOpenCard: (card: CardId) => void }) => {
   return (
-    <section id="carte" className="py-24 sm:py-28 lg:py-36 bg-cream text-moss">
+    <section id="carte" className="py-24 sm:py-28 lg:py-36">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           index="02"
           eyebrow="La Carte"
           title="Cuisine de saison, cave d'exception"
           intro="Une cuisine raffinée qui célèbre les produits de saison et les saveurs authentiques."
-          tone="dark"
         />
 
         <div data-anim-group="clip" className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
@@ -48,14 +47,13 @@ const Menu = ({ onOpenCard }: { onOpenCard: (card: CardId) => void }) => {
                 alt={card.alt}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-moss-dark via-moss-dark/50 to-transparent"></div>
-              <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8 lg:p-10 text-cream">
-                <p className="text-[11px] sm:text-xs uppercase tracking-[0.25em] text-cream/70">{card.eyebrow}</p>
+              <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8 lg:p-10">
+                <p className="text-[11px] sm:text-xs uppercase tracking-[0.25em]">{card.eyebrow}</p>
                 <h3 className="mt-3 font-serif text-3xl sm:text-4xl lg:text-5xl">{card.title}</h3>
-                <p className="mt-3 font-light text-cream/80 max-w-sm">{card.text}</p>
+                <p className="mt-3 font-light max-w-sm">{card.text}</p>
                 <span className="mt-6 inline-flex items-center gap-3 text-sm uppercase tracking-[0.2em]">
                   Découvrir
-                  <span className="flex items-center justify-center w-9 h-9 rounded-full border border-cream/50 transition-all duration-300 group-hover:bg-cream group-hover:text-moss group-hover:border-cream">
+                  <span className="flex items-center justify-center w-9 h-9 rounded-full border transition-all duration-300">
                     <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" />
                   </span>
                 </span>
@@ -64,9 +62,9 @@ const Menu = ({ onOpenCard }: { onOpenCard: (card: CardId) => void }) => {
           ))}
         </div>
 
-        <div data-anim="fade-up" className="mt-16 lg:mt-20 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border-t border-moss/15 pt-12">
+        <div data-anim="fade-up" className="mt-16 lg:mt-20 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border-t pt-12">
           <div className="lg:col-span-5">
-            <p className="text-xs uppercase tracking-[0.3em] text-wine">Notre cave</p>
+            <p className="text-xs uppercase tracking-[0.3em]">Notre cave</p>
             <p className="mt-3 font-serif text-2xl sm:text-3xl leading-snug">
               Plus de 1 500 références soigneusement sélectionnées par notre sommelier Jeremy Le Bon.
             </p>
@@ -75,9 +73,9 @@ const Menu = ({ onOpenCard }: { onOpenCard: (card: CardId) => void }) => {
             {WINE_STYLES.map((style) => (
               <li
                 key={style}
-                className="flex items-center gap-2 border border-moss/20 rounded-full px-5 py-2.5 text-sm tracking-wide"
+                className="flex items-center gap-2 border rounded-full px-5 py-2.5 text-sm tracking-wide"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-wine"></span>
+                <span className="w-1.5 h-1.5 rounded-full"></span>
                 {style}
               </li>
             ))}

@@ -4,15 +4,16 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Jost', 'Century Gothic', 'sans-serif'],
-        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+        sans: ['Lemon Milk', 'sans-serif'],
       },
       colors: {
-        olive: '#555849',
-        moss: { DEFAULT: '#4B4C3A', dark: '#3A3B2E' },
-        wine: { DEFAULT: '#7B2D26', dark: '#6B2520' },
-        sage: { DEFAULT: '#6B7A5A', dark: '#5A6B49' },
-        cream: '#F8F6F0',
+        primary: '#4B4C3A',
+        secondary: '#FFFFFF',
+        accent: '#7B2D26',
+      },
+      animation: {
+        'fade-in': 'fadeIn 1s ease-out',
+        'fade-in-up': 'fadeInUp 1s ease-out 0.5s both',
       },
     },
   },
