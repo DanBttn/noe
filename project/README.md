@@ -14,11 +14,14 @@ Avant de publier : `npm run typecheck`, `npm run lint`, puis `npm run build`.
 
 ## Publier sur Vercel
 
-```bash
-vercel --prod
-```
+La mise en ligne est automatique : le dépôt GitHub est relié au projet Vercel `noe-restaurant`.
 
-Le dossier est déjà relié au projet Vercel `noe-restaurant` (dossier `.vercel`, non versionné).
+- Chaque `git push` sur `main` met le site en production (environ 1 minute).
+- Un push sur une autre branche crée une version de test, avec sa propre adresse.
+- Le suivi des déploiements se fait sur https://vercel.com/danbitton04-4990/noe-restaurant/deployments
+
+Dans les réglages Vercel, le dossier racine est `project` et le framework est Vite.
+Pour publier à la main sans passer par GitHub : `vercel --prod` depuis la racine du dépôt.
 
 ## Où modifier quoi
 
