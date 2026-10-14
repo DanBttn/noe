@@ -35,7 +35,7 @@ const fr = {
     book: 'Réserver une table',
     menu: 'Menu',
     wine: 'Carte des vins',
-    metro: 'Villiers & Malesherbes',
+    metro: ' Metro Villiers & Malesherbes',
   },
   about: {
     eyebrow: 'À propos',
