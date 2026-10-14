@@ -38,12 +38,12 @@ const Menu = ({ onOpenCard }: { onOpenCard: (card: CardId) => void }) => {
                 <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                 <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8 lg:p-10 text-white">
 
-                  <p className="text-[11px] sm:text-xs uppercase tracking-[0.25em]">{card.eyebrow}</p>
-                  <h3 className="mt-3 font-serif text-3xl sm:text-4xl lg:text-5xl">{card.title}</h3>
-                  <p className="mt-3 font-light max-w-sm">{card.text}</p>
-                  <span className="mt-6 inline-flex items-center gap-3 text-sm uppercase tracking-[0.2em]">
+                  <p className="text-xs sm:text-sm uppercase tracking-[0.18em]">{card.eyebrow}</p>
+                  <h3 className="mt-3 font-serif text-4xl sm:text-5xl lg:text-[3.25rem] lg:leading-tight">{card.title}</h3>
+                  <p className="mt-3 text-base sm:text-lg font-light max-w-md">{card.text}</p>
+                  <span className="mt-6 inline-flex items-center gap-3 text-sm sm:text-base uppercase tracking-[0.2em]">
                     {section.discover}
-                    <span className="flex items-center justify-center w-9 h-9 rounded-full border transition-all duration-300">
+                    <span className="flex items-center justify-center w-10 h-10 rounded-full border transition-all duration-300">
                       <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" />
                     </span>
                   </span>
