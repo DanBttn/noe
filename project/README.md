@@ -32,6 +32,7 @@ Pour publier à la main sans passer par GitHub : `vercel --prod` depuis la racin
 | Adresse, téléphone, email, Instagram | `src/data/info.ts` |
 | Liens OpenTable, Google Maps, carte des vins PDF | `src/links.ts` |
 | Les photos de la galerie | `public/images/galerie/` + la liste dans `src/components/Gallery.tsx` |
+| Les badges des distinctions | `public/images/distinctions/` + `src/components/Awards.tsx` |
 | Les animations | `src/motion.ts` |
 
 Les photos de la galerie doivent être redimensionnées (1600 px de large environ) avant d'être ajoutées :

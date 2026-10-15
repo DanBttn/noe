@@ -55,6 +55,19 @@ const fr = {
     ],
     imageAlt: 'Cave à vins du restaurant Noé avec sa collection de bouteilles',
   },
+  awards: {
+    eyebrow: 'Distinctions',
+    gaultMillau: {
+      alt: 'Gault&Millau - 1 toque',
+      title: 'Gault&Millau',
+      text: '1 toque',
+    },
+    starWineList: {
+      alt: 'Star Wine List of the Year 2026 France - Silver Star Winner',
+      title: 'Star Wine List of the Year 2026',
+      text: 'Silver Star · France',
+    },
+  },
   marquee: ['Bar à vins', 'Cuisine de saison', 'Cave de 2 000 références', 'Paris 17ᵉ'],
   menuSection: {
     eyebrow: 'La Carte',
@@ -218,6 +231,19 @@ const en: Dictionary = {
       { value: 'Semi-open', label: 'our kitchen' },
     ],
     imageAlt: "Noé's wine cellar and its collection of bottles",
+  },
+  awards: {
+    eyebrow: 'Awards',
+    gaultMillau: {
+      alt: 'Gault&Millau - 1 toque',
+      title: 'Gault&Millau',
+      text: '1 toque',
+    },
+    starWineList: {
+      alt: 'Star Wine List of the Year 2026 France - Silver Star Winner',
+      title: 'Star Wine List of the Year 2026',
+      text: 'Silver Star · France',
+    },
   },
   marquee: ['Wine bar', 'Seasonal cooking', '2,000-wine cellar', 'Paris 17th'],
   menuSection: {

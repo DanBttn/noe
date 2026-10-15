@@ -2,6 +2,7 @@ import { useCallback, useRef, useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
+import Awards from './components/Awards';
 import Marquee from './components/Marquee';
 import Menu from './components/Menu';
 import Gallery from './components/Gallery';
@@ -32,6 +33,7 @@ function App() {
       <Header />
       <Hero onOpenCard={setOpenCard} />
       <About />
+      <Awards />
       <Marquee />
       <Menu onOpenCard={setOpenCard} />
       <Gallery />
