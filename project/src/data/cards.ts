@@ -57,9 +57,12 @@ export const CARDS: Record<Lang, Record<CardId, Card>> = {
           groups: [
             {
               items: [
-                { name: 'Brochette de langue de bœuf, prune & amandes, sauce soja', price: '20 €' },
+                {
+                  name: 'Tartelette à l’encre de seiche, gambas, crème miso, concombre, agrumes & noisettes',
+                  price: '22 €',
+                },
                 { name: 'Crispy aubergine laquée, stracciatella et melon', price: '19 €' },
-                { name: 'Tartelette gribiche, chutney de tomates, tomates cerises fraîches et anisées', price: '19 €' },
+                { name: 'Poêlée de champignons, halloumi, butternut & émulsion chorizo', price: '20 €' },
               ],
             },
           ],
@@ -69,10 +72,13 @@ export const CARDS: Record<Lang, Record<CardId, Card>> = {
           groups: [
             {
               items: [
-                { name: 'Rouget, purée de carottes, poireaux, sauce curry rouge & tomates', price: '32 €' },
                 {
-                  name: 'Filet de veau, sauce au vin rouge, jambon & girolles, pommes de terre mitrailles au beurre persillé',
-                  price: '40 €',
+                  name: 'Cordon-bleu de veau, mayonnaise et crème à la truffe noire, purée & chips de panais, pickles d’oignon',
+                  price: '42 €',
+                },
+                {
+                  name: 'Églefin, beurre au sésame, ail et combava, salsifis rôtis, jus de volaille et crème d’ail',
+                  price: '30 €',
                 },
                 { name: 'Risotto de petit épeautre, maïs rôti, parmesan, moules & œufs de brochet fumé', price: '30 €' },
               ],
@@ -89,7 +95,7 @@ export const CARDS: Record<Lang, Record<CardId, Card>> = {
                 { name: 'Tomahawk de bœuf', price: '145 €/kg' },
                 {
                   name: 'Garnitures',
-                  detail: 'Légumes · Purée de carottes · Pommes de terre mitrailles au beurre persillé · Salade verte',
+                  detail: 'Légumes · Purée de panais · Pommes de terre mitrailles au beurre persillé · Salade verte',
                   price: '8 €',
                 },
               ],
@@ -101,12 +107,9 @@ export const CARDS: Record<Lang, Record<CardId, Card>> = {
           groups: [
             {
               items: [
+                { name: 'Crème caramel japonaise', price: '14 €' },
+                { name: 'Cookie tiède, confiture de figues, glace baileys et dulce de leche', price: '15 €' },
                 { name: 'Gâteau chocolat et crème légère, cerises confites', price: '15 €' },
-                {
-                  name: 'Financier amande, noisettes & abricots, crème chantilly, glace chocolat blanc & lavande',
-                  price: '15 €',
-                },
-                { name: 'Panacotta vanille, confiture de figues, gelée de vin chaud', price: '14 €' },
                 { name: 'Sélection de fromages Maison Ratafia, confiture d’abricot', price: '17 €' },
               ],
             },
@@ -234,9 +237,12 @@ export const CARDS: Record<Lang, Record<CardId, Card>> = {
           groups: [
             {
               items: [
-                { name: 'Beef tongue skewer, plum & almonds, soy sauce', price: '€20' },
+                {
+                  name: 'Squid ink tartlet, prawns, miso cream, cucumber, citrus & hazelnuts',
+                  price: '€22',
+                },
                 { name: 'Crispy lacquered aubergine, stracciatella & melon', price: '€19' },
-                { name: 'Gribiche tartlet, tomato chutney, fresh cherry tomatoes with anise', price: '€19' },
+                { name: 'Pan-fried mushrooms, halloumi, butternut squash & chorizo emulsion', price: '€20' },
               ],
             },
           ],
@@ -246,10 +252,13 @@ export const CARDS: Record<Lang, Record<CardId, Card>> = {
           groups: [
             {
               items: [
-                { name: 'Red mullet, carrot purée, leeks, red curry & tomato sauce', price: '€32' },
                 {
-                  name: 'Veal fillet, red wine sauce, ham & chanterelles, baby potatoes in parsley butter',
-                  price: '€40',
+                  name: 'Veal cordon bleu, black truffle mayonnaise & cream, parsnip purée & crisps, pickled onions',
+                  price: '€42',
+                },
+                {
+                  name: 'Haddock, sesame, garlic & kaffir lime butter, roasted salsify, chicken jus & garlic cream',
+                  price: '€30',
                 },
                 { name: 'Spelt risotto, roasted corn, parmesan, mussels & smoked pike roe', price: '€30' },
               ],
@@ -266,7 +275,7 @@ export const CARDS: Record<Lang, Record<CardId, Card>> = {
                 { name: 'Beef tomahawk', price: '€145/kg' },
                 {
                   name: 'Sides',
-                  detail: 'Vegetables · Carrot purée · Baby potatoes in parsley butter · Green salad',
+                  detail: 'Vegetables · Parsnip purée · Baby potatoes in parsley butter · Green salad',
                   price: '€8',
                 },
               ],
@@ -278,12 +287,9 @@ export const CARDS: Record<Lang, Record<CardId, Card>> = {
           groups: [
             {
               items: [
+                { name: 'Japanese crème caramel', price: '€14' },
+                { name: 'Warm cookie, fig jam, Baileys ice cream & dulce de leche', price: '€15' },
                 { name: 'Chocolate cake, light cream, candied cherries', price: '€15' },
-                {
-                  name: 'Almond financier, hazelnuts & apricots, whipped cream, white chocolate & lavender ice cream',
-                  price: '€15',
-                },
-                { name: 'Vanilla panna cotta, fig jam, mulled wine jelly', price: '€14' },
                 { name: 'Cheese selection from Maison Ratafia, apricot jam', price: '€17' },
               ],
             },
