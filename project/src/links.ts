@@ -16,4 +16,4 @@ export const mapsEmbedUrl = (lang: Lang) =>
 export const MAPS_DIRECTIONS_URL = `https://www.google.com/maps/dir/?api=1&destination=${MAPS_ADDRESS}`;
 
 export const WINE_LIST_URL =
-  'https://drive.google.com/file/d/1fKnRDSArCyHuPhgWj3SWI68lrPIAv692/view?usp=sharing';
+  '/carte-des-vins.pdf';

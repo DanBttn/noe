@@ -61,7 +61,7 @@ export const CARDS: Record<Lang, Record<CardId, Card>> = {
                   name: 'Tartelette à l’encre de seiche, gambas, crème miso, concombre, agrumes & noisettes',
                   price: '22 €',
                 },
-                { name: 'Crispy aubergine laquée, stracciatella et melon', price: '19 €' },
+                { name: 'Crispy aubergine laquée, stracciatella et pink lady', price: '19 €' },
                 { name: 'Poêlée de champignons, halloumi, butternut & émulsion chorizo', price: '20 €' },
               ],
             },
@@ -73,7 +73,7 @@ export const CARDS: Record<Lang, Record<CardId, Card>> = {
             {
               items: [
                 {
-                  name: 'Cordon-bleu de veau, mayonnaise et crème à la truffe noire, purée & chips de panais, pickles d’oignon',
+                  name: 'Cordon-bleu, mayonnaise et crème à la truffe noire, purée & chips de panais, pickles d’oignon',
                   price: '42 €',
                 },
                 {
@@ -87,15 +87,18 @@ export const CARDS: Record<Lang, Record<CardId, Card>> = {
         },
         {
           title: 'À partager',
-          subtitle: 'Selon poids (30 min de cuisson)',
           groups: [
             {
               items: [
-                { name: 'Épaule d’agneau confite 13 heures', price: '70 €/kg' },
-                { name: 'Tomahawk de bœuf', price: '145 €/kg' },
+                {
+                  name: 'Souris d’agneau mijotée 7 h en cocotte, légumes et pommes de terre',
+                  detail: 'Minimum 2 personnes',
+                  price: '45 €/pers.',
+                },
+                { name: 'Tomahawk de bœuf (selon poids)', price: '145 €/kg' },
                 {
                   name: 'Garnitures',
-                  detail: 'Légumes · Purée de panais · Pommes de terre mitrailles au beurre persillé · Salade verte',
+                  detail: 'Légumes · Purée de panais · Salade verte · Pommes de terre mitrailles au beurre persillé',
                   price: '8 €',
                 },
               ],
@@ -107,8 +110,11 @@ export const CARDS: Record<Lang, Record<CardId, Card>> = {
           groups: [
             {
               items: [
-                { name: 'Crème caramel japonaise', price: '14 €' },
-                { name: 'Cookie tiède, confiture de figues, glace baileys et dulce de leche', price: '15 €' },
+                { name: 'Crème caramel et tuile chocolat', price: '14 €' },
+                {
+                  name: 'Cookie tiède aux figues séchées, confiture maison, glace baileys et dulce de leche',
+                  price: '15 €',
+                },
                 { name: 'Gâteau chocolat et crème légère, cerises confites', price: '15 €' },
                 { name: 'Sélection de fromages Maison Ratafia, confiture d’abricot', price: '17 €' },
               ],
@@ -132,8 +138,8 @@ export const CARDS: Record<Lang, Record<CardId, Card>> = {
             {
               label: 'Champagne',
               items: [
-                { name: 'Jacquesson', detail: 'Champagne - Extra Brut - Cuvée N°747', meta: 'NM', price: '26 €' },
-                { name: 'Romain Henin', detail: 'Champagne - L’Odyssée Pétillante - Chapitre 1', meta: '2022', price: '16 €' },
+                { name: 'Krug', detail: 'Champagne - Grande Cuvée - 174ème Édition', meta: 'NM', price: '49 €' },
+                { name: 'Olivier Horiot', detail: 'Champagne - Brut Nature - Métisse - Noirs & Blancs', meta: 'NM', price: '19 €' },
               ],
             },
           ],
@@ -143,21 +149,23 @@ export const CARDS: Record<Lang, Record<CardId, Card>> = {
           groups: [
             {
               label: 'Bourgogne',
-              items: [
-                { name: 'Fontaine-Gagnard', detail: 'Chassagne-Montrachet 1er Cru - Les Vergers', meta: '2022', price: '22 €' },
-                { name: 'Laurent Tribut', detail: 'Chablis', meta: '2018', price: '11 €' },
-              ],
+              items: [{ name: 'Armand Heitz', detail: 'Hautes-Côtes-de-Nuits', meta: '2023', price: '14 €' }],
             },
             {
-              label: 'Languedoc',
-              items: [{ name: 'Clos Constantin', detail: 'Languedoc - Strate', meta: '2023', price: '12 €' }],
+              label: 'Jura',
+              items: [{ name: 'Domaine de la Renardière', detail: 'Arbois-Pupillin - Jurassique', meta: '2023', price: '12 €' }],
+            },
+            {
+              label: 'Savoie',
+              items: [{ name: 'Nicolas Gonin', detail: 'Isère Balmes Dauphinoises - Altesse', meta: '2018', price: '11 €' }],
+            },
+            {
+              label: 'Vallée du Rhône',
+              items: [{ name: 'Domaine des Entrefaux', detail: 'Crozes-Hermitage', meta: '2023', price: '13 €' }],
             },
             {
               label: 'Vallée de la Loire',
-              items: [
-                { name: 'Eric Morgat', detail: 'Anjou - La Croisée Des Chenins', meta: '2017', price: '24 €' },
-                { name: 'Terra Vita Vinum', detail: 'Anjou - Grand Vau', meta: '2022', price: '9 €' },
-              ],
+              items: [{ name: 'Guillerault Fargette', detail: 'Sancerre - Alpha-Omega', meta: '2022', price: '15 €' }],
             },
           ],
         },
@@ -166,44 +174,34 @@ export const CARDS: Record<Lang, Record<CardId, Card>> = {
           groups: [
             {
               label: 'Bourgogne',
-              items: [
-                { name: 'Armand Heitz', detail: 'Bourgogne', meta: '2023', price: '14 €' },
-                { name: 'Sylvain Cathiard & Fils', detail: 'Hautes-Côtes-de-Nuits - Les Dames Huguette', meta: '2022', price: '29 €' },
-              ],
+              items: [{ name: 'Fanny Sabre', detail: 'Bourgogne', meta: '2023', price: '15 €' }],
+            },
+            {
+              label: 'Beaujolais',
+              items: [{ name: 'Binaume', detail: 'Vin de France - Le Gamay de Bully', meta: '2023', price: '11 €' }],
             },
             {
               label: 'Vallée du Rhône',
-              items: [
-                { name: 'Domaine Emmanuel Darnaud', detail: 'Crozes-Hermitage - Les Trois Chênes', meta: '2021', price: '10 €' },
-                { name: 'Domaine R. & M. Saouma', detail: 'Châteauneuf-du-Pape - Omnia', meta: '2021', price: '27 €' },
-              ],
+              items: [{ name: 'Domaine Charvin', detail: 'Côtes-du-Rhône', meta: '2018', price: '13 €' }],
             },
             {
-              label: 'Vallée de la Loire',
-              items: [{ name: 'Domaine Guiberteau', detail: 'Saumur', meta: '2023', price: '8 €' }],
+              label: 'Languedoc',
+              items: [{ name: 'Héritage du Pic Saint Loup', detail: 'Pic Saint Loup - Tour de Pierre', meta: '2021', price: '12 €' }],
             },
-          ],
-        },
-        {
-          title: 'Rosé',
-          groups: [
             {
-              label: 'Provence',
-              items: [
-                { name: 'Domaine de la Tour du Bon', detail: 'Bandol', meta: '2024', price: '12 €' },
-                { name: 'Domaine Tempier', detail: 'Bandol', meta: '2021', price: '13 €' },
-              ],
+              label: 'Bordeaux',
+              items: [{ name: 'Château d’Aiguilhe', detail: 'Castillon-Côtes-de-Bordeaux', meta: '2012', price: '14 €' }],
             },
           ],
         },
         {
-          title: 'Doux / Liquoreux',
+          title: 'Les Vins Doux',
           groups: [
             {
               items: [
-                { name: 'Pierre Deville', detail: 'Ratafia de Champagne', meta: '2019', price: '13 €' },
-                { name: 'Château Coutet', detail: 'Barsac - 1er Cru Classé', meta: '2020', price: '23 €' },
+                { name: 'Château Suduiraut', detail: 'Sauternes', meta: '2017', price: '29 €' },
                 { name: 'Marnes Blanches', detail: 'Macvin du Jura', price: '13 €' },
+                { name: 'Pierre Deville', detail: 'Ratafia de Champagne', meta: '2019', price: '13 €' },
               ],
             },
           ],
@@ -241,7 +239,7 @@ export const CARDS: Record<Lang, Record<CardId, Card>> = {
                   name: 'Squid ink tartlet, prawns, miso cream, cucumber, citrus & hazelnuts',
                   price: '€22',
                 },
-                { name: 'Crispy lacquered aubergine, stracciatella & melon', price: '€19' },
+                { name: 'Crispy lacquered aubergine, stracciatella & Pink Lady apple', price: '€19' },
                 { name: 'Pan-fried mushrooms, halloumi, butternut squash & chorizo emulsion', price: '€20' },
               ],
             },
@@ -253,7 +251,7 @@ export const CARDS: Record<Lang, Record<CardId, Card>> = {
             {
               items: [
                 {
-                  name: 'Veal cordon bleu, black truffle mayonnaise & cream, parsnip purée & crisps, pickled onions',
+                  name: 'Cordon bleu, black truffle mayonnaise & cream, parsnip purée & crisps, pickled onions',
                   price: '€42',
                 },
                 {
@@ -267,15 +265,18 @@ export const CARDS: Record<Lang, Record<CardId, Card>> = {
         },
         {
           title: 'To share',
-          subtitle: 'Priced by weight (30 min cooking time)',
           groups: [
             {
               items: [
-                { name: 'Lamb shoulder confit, slow-cooked for 13 hours', price: '€70/kg' },
-                { name: 'Beef tomahawk', price: '€145/kg' },
+                {
+                  name: 'Lamb shank slow-cooked for 7 hours in a cocotte, vegetables & potatoes',
+                  detail: 'Minimum 2 people',
+                  price: '€45/person',
+                },
+                { name: 'Beef tomahawk (priced by weight)', price: '€145/kg' },
                 {
                   name: 'Sides',
-                  detail: 'Vegetables · Parsnip purée · Baby potatoes in parsley butter · Green salad',
+                  detail: 'Vegetables · Parsnip purée · Green salad · Baby potatoes in parsley butter',
                   price: '€8',
                 },
               ],
@@ -287,8 +288,8 @@ export const CARDS: Record<Lang, Record<CardId, Card>> = {
           groups: [
             {
               items: [
-                { name: 'Japanese crème caramel', price: '€14' },
-                { name: 'Warm cookie, fig jam, Baileys ice cream & dulce de leche', price: '€15' },
+                { name: 'Crème caramel with chocolate tuile', price: '€14' },
+                { name: 'Warm dried fig cookie, homemade jam, Baileys ice cream & dulce de leche', price: '€15' },
                 { name: 'Chocolate cake, light cream, candied cherries', price: '€15' },
                 { name: 'Cheese selection from Maison Ratafia, apricot jam', price: '€17' },
               ],
@@ -312,8 +313,8 @@ export const CARDS: Record<Lang, Record<CardId, Card>> = {
             {
               label: 'Champagne',
               items: [
-                { name: 'Jacquesson', detail: 'Champagne - Extra Brut - Cuvée N°747', meta: 'NV', price: '€26' },
-                { name: 'Romain Henin', detail: 'Champagne - L’Odyssée Pétillante - Chapitre 1', meta: '2022', price: '€16' },
+                { name: 'Krug', detail: 'Champagne - Grande Cuvée - 174ème Édition', meta: 'NV', price: '€49' },
+                { name: 'Olivier Horiot', detail: 'Champagne - Brut Nature - Métisse - Noirs & Blancs', meta: 'NV', price: '€19' },
               ],
             },
           ],
@@ -323,21 +324,23 @@ export const CARDS: Record<Lang, Record<CardId, Card>> = {
           groups: [
             {
               label: 'Burgundy',
-              items: [
-                { name: 'Fontaine-Gagnard', detail: 'Chassagne-Montrachet 1er Cru - Les Vergers', meta: '2022', price: '€22' },
-                { name: 'Laurent Tribut', detail: 'Chablis', meta: '2018', price: '€11' },
-              ],
+              items: [{ name: 'Armand Heitz', detail: 'Hautes-Côtes-de-Nuits', meta: '2023', price: '€14' }],
             },
             {
-              label: 'Languedoc',
-              items: [{ name: 'Clos Constantin', detail: 'Languedoc - Strate', meta: '2023', price: '€12' }],
+              label: 'Jura',
+              items: [{ name: 'Domaine de la Renardière', detail: 'Arbois-Pupillin - Jurassique', meta: '2023', price: '€12' }],
+            },
+            {
+              label: 'Savoie',
+              items: [{ name: 'Nicolas Gonin', detail: 'Isère Balmes Dauphinoises - Altesse', meta: '2018', price: '€11' }],
+            },
+            {
+              label: 'Rhône Valley',
+              items: [{ name: 'Domaine des Entrefaux', detail: 'Crozes-Hermitage', meta: '2023', price: '€13' }],
             },
             {
               label: 'Loire Valley',
-              items: [
-                { name: 'Eric Morgat', detail: 'Anjou - La Croisée Des Chenins', meta: '2017', price: '€24' },
-                { name: 'Terra Vita Vinum', detail: 'Anjou - Grand Vau', meta: '2022', price: '€9' },
-              ],
+              items: [{ name: 'Guillerault Fargette', detail: 'Sancerre - Alpha-Omega', meta: '2022', price: '€15' }],
             },
           ],
         },
@@ -346,33 +349,23 @@ export const CARDS: Record<Lang, Record<CardId, Card>> = {
           groups: [
             {
               label: 'Burgundy',
-              items: [
-                { name: 'Armand Heitz', detail: 'Bourgogne', meta: '2023', price: '€14' },
-                { name: 'Sylvain Cathiard & Fils', detail: 'Hautes-Côtes-de-Nuits - Les Dames Huguette', meta: '2022', price: '€29' },
-              ],
+              items: [{ name: 'Fanny Sabre', detail: 'Bourgogne', meta: '2023', price: '€15' }],
+            },
+            {
+              label: 'Beaujolais',
+              items: [{ name: 'Binaume', detail: 'Vin de France - Le Gamay de Bully', meta: '2023', price: '€11' }],
             },
             {
               label: 'Rhône Valley',
-              items: [
-                { name: 'Domaine Emmanuel Darnaud', detail: 'Crozes-Hermitage - Les Trois Chênes', meta: '2021', price: '€10' },
-                { name: 'Domaine R. & M. Saouma', detail: 'Châteauneuf-du-Pape - Omnia', meta: '2021', price: '€27' },
-              ],
+              items: [{ name: 'Domaine Charvin', detail: 'Côtes-du-Rhône', meta: '2018', price: '€13' }],
             },
             {
-              label: 'Loire Valley',
-              items: [{ name: 'Domaine Guiberteau', detail: 'Saumur', meta: '2023', price: '€8' }],
+              label: 'Languedoc',
+              items: [{ name: 'Héritage du Pic Saint Loup', detail: 'Pic Saint Loup - Tour de Pierre', meta: '2021', price: '€12' }],
             },
-          ],
-        },
-        {
-          title: 'Rosé',
-          groups: [
             {
-              label: 'Provence',
-              items: [
-                { name: 'Domaine de la Tour du Bon', detail: 'Bandol', meta: '2024', price: '€12' },
-                { name: 'Domaine Tempier', detail: 'Bandol', meta: '2021', price: '€13' },
-              ],
+              label: 'Bordeaux',
+              items: [{ name: 'Château d’Aiguilhe', detail: 'Castillon-Côtes-de-Bordeaux', meta: '2012', price: '€14' }],
             },
           ],
         },
@@ -381,9 +374,9 @@ export const CARDS: Record<Lang, Record<CardId, Card>> = {
           groups: [
             {
               items: [
-                { name: 'Pierre Deville', detail: 'Ratafia de Champagne', meta: '2019', price: '€13' },
-                { name: 'Château Coutet', detail: 'Barsac - 1er Cru Classé', meta: '2020', price: '€23' },
+                { name: 'Château Suduiraut', detail: 'Sauternes', meta: '2017', price: '€29' },
                 { name: 'Marnes Blanches', detail: 'Macvin du Jura', price: '€13' },
+                { name: 'Pierre Deville', detail: 'Ratafia de Champagne', meta: '2019', price: '€13' },
               ],
             },
           ],
