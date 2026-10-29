@@ -21,8 +21,6 @@ dist-ssr
 *.sln
 *.sw?
 .env
-
-.vercel
 .env*
 
 # Fichiers temporaires de Vite

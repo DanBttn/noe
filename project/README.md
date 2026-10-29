@@ -1,6 +1,6 @@
 # Restaurant Noé — site vitrine
 
-Site du restaurant Noé (34 rue Legendre, Paris 17ᵉ), en ligne sur https://noe-restaurant.vercel.app.
+Site du restaurant Noé (34 rue Legendre, Paris 17ᵉ), en ligne sur https://noeparis.com (hébergé sur Firebase : https://noe-restaurant-web.web.app).
 React + Vite + Tailwind, animations GSAP et défilement fluide Lenis, en français et en anglais.
 
 ## Lancer le site en local
@@ -12,16 +12,15 @@ npm run dev        # http://localhost:5173
 
 Avant de publier : `npm run typecheck`, `npm run lint`, puis `npm run build`.
 
-## Publier sur Vercel
+## Publier sur Firebase
 
-La mise en ligne est automatique : le dépôt GitHub est relié au projet Vercel `noe-restaurant`.
+Le site est hébergé sur Firebase Hosting, projet `noe-restaurant-web`.
 
-- Chaque `git push` sur `main` met le site en production (environ 1 minute).
-- Un push sur une autre branche crée une version de test, avec sa propre adresse.
-- Le suivi des déploiements se fait sur https://vercel.com/danbitton04-4990/noe-restaurant/deployments
+Depuis la racine du dépôt : `firebase deploy`. Le build (`npm run build` dans `project/`) se lance
+automatiquement avant l'envoi, puis le dossier `project/dist` est mis en ligne.
 
-Dans les réglages Vercel, le dossier racine est `project` et le framework est Vite.
-Pour publier à la main sans passer par GitHub : `vercel --prod` depuis la racine du dépôt.
+- La configuration est dans `firebase.json` et `.firebaserc`, à la racine du dépôt.
+- Le suivi des versions se fait sur https://console.firebase.google.com/project/noe-restaurant-web/hosting
 
 ## Où modifier quoi
 
